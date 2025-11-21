@@ -1,0 +1,14 @@
+name: Integración y entrega continua
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: inicial
+        run: echo "Workflow creado desde GitHub"

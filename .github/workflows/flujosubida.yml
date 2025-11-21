@@ -13,7 +13,7 @@ jobs:
       nombres: "Andrés Pascual"
       apellidos: "Díaz Riera"
       edad: "25"
-      version_proyecto: "3.0"
+      version_proyecto: "3.1"
 
     steps:
       - name: presentación
@@ -23,7 +23,7 @@ jobs:
           echo "Edad: $edad"
 
       - name: datos generales
-        run: echo "carrera de ingeniería de sistemas"
+        run: echo "carrera de ingeniería de sistemas e informática"
 
       - name: variables de entorno secretas
         run: |

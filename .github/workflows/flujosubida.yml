@@ -9,6 +9,30 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    env:
+      nombres: "Andrés Pascual"
+      apellidos: "Díaz Riera"
+      edad: "25"
+      version_proyecto: "3.0"
+
     steps:
-      - name: inicial
-        run: echo "Workflow creado desde GitHub"
+      - name: presentación
+        run: |
+          echo "Nombres: $nombres"
+          echo "Apellidos: $apellidos"
+          echo "Edad: $edad"
+
+      - name: datos generales
+        run: echo "carrera de ingeniería de sistemas"
+
+      - name: variables de entorno secretas
+        run: |
+          echo "user: ********"
+          echo "password: ********"
+        env:
+          user: ${{ secrets.USER }}
+          password: ${{ secrets.PASSWORD }}
+
+      - name: variables abiertas
+        run: |
+          echo "Versión del proyecto: $version_proyecto"
